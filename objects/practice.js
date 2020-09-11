@@ -2,7 +2,6 @@
   Once you complete a problem, refresh ./SpecRunner.html in your browser and check to see if the problem's test(s) are passing.
   Passed tests will be indicated by a green circle.
   Failed tests will be indicated by a red X.
-
   You can refresh the page at any time to re-run all the tests.
 */
 
@@ -13,7 +12,12 @@
   Give it a key of name with the value being your name, and another key of age with the value being your age.
   Then alert your name using dot notation.
 */
+var me = {
+  name: 'Justin',
+  age: 30
+}
 
+//alert(me.name)
 //Code here
 
 ////////// PROBLEM 2 //////////
@@ -22,7 +26,14 @@
   Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday.
   Have the values to those keys be strings that are equal to your favorite thing in that category.
 */
-
+var favoriteThings = {
+  band: 'Maroon 5',
+  food: 'Italian',
+  person: 'mom',
+  book: 'heavens door',
+  movie: 'Eat Pray love',
+  holiday: 'Halloween'
+}
 //Code here
 
 /*
@@ -31,14 +42,16 @@
 */
 
 //Code here
-
+favoriteThings.car = 'honda';
+favoriteThings.brand = 'freepeople';
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
   and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 */
 
 //Code here
-
+favoriteThings.food = 'Chicken Nuggets';
+favoriteThings.book =  'Harry Potter';
 ////////// PROBLEM 3 //////////
 
 /*
@@ -50,13 +63,18 @@
 */
 
 //Code here
+var backPack = {}
+let item = 'firstPocket';
+
+backPack['firstPocket'] = 'chapstick';
+backPack.color = 'black';
 
 /*
   After you do the above, alert your entire backPack object.
 */
 
 //Code here
-
+// No it breaks Jasmine
 /*
 You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
@@ -86,6 +104,10 @@ var user2 = {
 
 //Code Here
 
+user2.name = 'Bryan G. Smith';
+user2.email = 'bryan.smith@decmounta.in'
+
+
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
 
@@ -97,12 +119,19 @@ var user2 = {
 
 //Code Here
 
+const methodCollection = {};
+
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object.
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
 */
 
 //Code Here
+
+
+
+
+
 
 /*
   Now call your alertHello and logHello methods.
