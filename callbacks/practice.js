@@ -27,7 +27,14 @@
   Then invoke the callback function, passing in the first element in the array as it's argument.
 */
 
+
+
 // Code Here 
+
+const first = (arr, cb) => {
+  return cb(arr[0])
+
+}
 
 // Do not edit the code below.
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -40,6 +47,7 @@ first(names, function(firstName){
 
 
 
+
 ////////// PROBLEM 2 //////////
 
 /*
@@ -48,6 +56,16 @@ first(names, function(firstName){
 */
 
 //Code Here
+
+
+const last = (arr, cb) => {
+  return cb(arr[arr.length - 1])
+
+}
+
+
+
+
 
 // Do not edit the code below.
 last(names, function(lastName){
@@ -67,6 +85,14 @@ last(names, function(lastName){
 
 //Code Here
 
+
+let multiply = (num1, num2, cb) =>{
+  return cb(num1 * num2)
+}
+
+
+
+
 // Do not edit the code below.
 multiply(4, 3, function(answer){
   console.log('The answer is ' + answer); //should console.log 12
@@ -75,7 +101,15 @@ multiply(4, 3, function(answer){
 
 
 
+
+
+
+
+
+
 ////////// PROBLEM 4 //////////
+// Do not edit the code below. 
+
 
 /*
   Write a function called contains that takes in three parameters: an array, a name and a callback.  
@@ -86,6 +120,15 @@ multiply(4, 3, function(answer){
 
 //Code Here 
 
+function contains(arr, name, cb){
+  for(let i = 0; i < arr.length; i++){
+      if(arr[i] === name[i]){
+      }
+        cb(true);
+    }
+
+        cb(false);
+      }
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
   if(result === true){
@@ -107,6 +150,19 @@ contains(names, 'Colt', function(result){
 
 //Code Here
 
+function uniq(arr, cb){
+  for(let i = 0; i < arr.length; i++){
+    console.log('outer loop', i)
+    for(let j = i + 1; j < arr.length; j++){
+      console.log('inner loop', j)
+      if (arr[i] === arr [j]){
+        arr.splice(j, 1)
+
+}
+    }
+  }
+return cb(arr);
+  }
 // Do not edit the code below.
 uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
@@ -124,6 +180,14 @@ uniq(names, function(uniqArr){
 
 //Code Here 
 
+function each(people, cb){
+  for( let i = 0; i < people.length; i++){
+    cb(people[i], i)
+  }
+}
+
+
+
 // Do not edit the code below.
 each(names, function(item, indice){
   console.log('The item in the ' + indice + ' position is ' + item)
@@ -140,6 +204,21 @@ each(names, function(item, indice){
 */
 
 // Code here
+
+function getUserById(userArr, userId, cb){
+return cb((userArr.filter(function(el){
+  return el.id === userId;
+
+})[0]));}
+
+
+
+
+
+
+
+
+
 
 // Do not edit the code below.
 var users = [
